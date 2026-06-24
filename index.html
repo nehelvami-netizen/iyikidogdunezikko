@@ -1,59 +1,99 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>İyi ki Doğdun Ezikko</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>İyi ki Doğdun Ezikko</title>
 
-  <style>
-    body{
-      margin:0;
-      background:#0b0b0b;
-      color:#d4af37;
-      font-family:Georgia, serif;
-      text-align:center;
-    }
+<style>
+body{
+  margin:0;
+  background: radial-gradient(circle at top, #1a1a1a, #000);
+  color:#d4af37;
+  font-family:Georgia, serif;
+  text-align:center;
+  overflow-x:hidden;
+}
 
-    .hero{
-      height:100vh;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-    }
+/* altın parıltılar */
+.glow{
+  position:absolute;
+  width:200px;
+  height:200px;
+  background:radial-gradient(circle, rgba(212,175,55,0.3), transparent 70%);
+  border-radius:50%;
+  animation:float 6s infinite ease-in-out;
+}
 
-    h1{ font-size:60px; }
+@keyframes float{
+  0%{transform:translateY(0px);}
+  50%{transform:translateY(40px);}
+  100%{transform:translateY(0px);}
+}
 
-    p{
-      max-width:600px;
-      padding:20px;
-      line-height:1.6;
-    }
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+}
 
-    button{
-      padding:15px 30px;
-      background:#d4af37;
-      color:black;
-      border:none;
-      border-radius:30px;
-      cursor:pointer;
-      font-size:18px;
-    }
+h1{
+  font-size:70px;
+  margin:0;
+  text-shadow:0 0 20px rgba(212,175,55,0.5);
+}
 
-    #mesaj{
-      display:none;
-      margin-top:20px;
-      font-size:24px;
-    }
-  </style>
+p{
+  max-width:700px;
+  padding:20px;
+  line-height:1.7;
+  font-size:18px;
+}
+
+button{
+  padding:15px 35px;
+  background:#d4af37;
+  color:black;
+  border:none;
+  border-radius:30px;
+  cursor:pointer;
+  font-size:18px;
+  transition:0.3s;
+}
+
+button:hover{
+  transform:scale(1.1);
+}
+
+#mesaj{
+  display:none;
+  margin-top:30px;
+  font-size:26px;
+}
+
+section{
+  padding:80px 20px;
+}
+
+</style>
 </head>
 
 <body>
 
+<div class="glow" style="top:10%; left:20%;"></div>
+<div class="glow" style="top:60%; left:70%;"></div>
+
 <div class="hero">
   <h1>İyi ki Doğdun Ezikko ✨</h1>
 
-  <p>Bu site sana özel hazırlandı ❤️</p>
+  <p>
+    25 Haziran senin günün.  
+    Bu site sana özel hazırlandı.  
+    İyi ki varsın ❤️
+  </p>
 
   <button onclick="goster()">Son Sürpriz</button>
 
@@ -66,5 +106,7 @@ function goster(){
 }
 </script>
 
-</body>
+</body><audio id="bgMusic" loop>
+  <source src="muzik.mp3" type="audio/mpeg">
+</audio>
 </html>
