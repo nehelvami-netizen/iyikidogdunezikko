@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İyi ki Doğdun Ezikko</title>
+
+  <style>
+    body{
+      margin:0;
+      background:#0b0b0b;
+      color:#d4af37;
+      font-family:Georgia, serif;
+      text-align:center;
+      overflow-x:hidden;
+    }
+
+    /* Parıltı efekti */
+    .glow {
+      position: fixed;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(212,175,55,0.3), transparent 70%);
+      border-radius: 50%;
+      animation: float 6s infinite ease-in-out;
+      pointer-events: none;
+    }
+
+    @keyframes float {
+      0% {transform: translateY(0px);}
+      50% {transform: translateY(40px);}
+      100% {transform: translateY(0px);}
+    }
+
+    .hero{
+      height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      position:relative;
+      z-index:2;
+    }
+
+    h1{
+      font-size:60px;
+      margin:0;
+    }
+
+    p{
+      max-width:700px;
+      padding:20px;
+      font-size:18px;
+      line-height:1.7;
+    }
+
+    section{
+      padding:80px 20px;
+    }
+
+    .gallery{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:15px;
+    }
+
+    .gallery img{
+      width:220px;
+      border-radius:12px;
+      border:2px solid #d4af37;
+      transition:0.3s;
+    }
+
+    .gallery img:hover{
+      transform:scale(1.1);
+    }
+
+    button{
+      padding:15px 35px;
+      background:#d4af37;
+      color:black;
+      border:none;
+      border-radius:30px;
+      cursor:pointer;
+      font-size:18px;
+      margin-top:20px;
+    }
+
+    #surprise{
+      display:none;
+      font-size:26px;
+      margin-top:30px;
+    }
+
+    .small{
+      font-size:14px;
+      opacity:0.7;
+      margin-top:10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- altın parıltılar -->
+<div class="glow" style="top:10%; left:20%;"></div>
+<div class="glow" style="top:60%; left:70%;"></div>
+
+<div class="hero">
+  <h1>İyi ki Doğdun Ezikko ✨</h1>
+  <p>
+    Bu site sadece sana özel.  
+    25 Haziran senin günün ve bugün senin için küçük bir sürpriz hazırladım.
+  </p>
+
+  <div class="small">❤️ 28 Nisan 2026'dan beri</div>
+</div>
+
+<section>
+  <h2>Bizim Anılarımız</h2>
+
+  <div class="gallery">
+    <img src="foto1.jpg">
+    <img src="foto2.jpg">
+    <img src="foto3.jpg">
+    <img src="foto4.jpg">
+    <img src="foto5.jpg">
+  </div>
+</section>
+
+<section>
+  <h2>Sana Bir Mesaj</h2>
+
+  <p>
+    İyi ki hayatıma girdin.  
+    İyi ki varsın.  
+    Her şey için teşekkür ederim.  
+    tüm yaslarında da birlikte olalım ezikko.
+  </p>
+
+  <button onclick="goster()">Son Sürpriz</button>
+
+  <div id="surprise">
+    Seni çok seviyorum ❤️
+  </div>
+</section>
+
+<script>
+function goster(){
+  document.getElementById("surprise").style.display = "block";
+}
+</script>
+
+</body>
+</html>
